@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="row row-cols-1">
+      <div class="col">
+        <h1>Anh biết anh sai rồi, tha lỗi cho anh nha </h1>
+      </div>
+
+      <div class="col">
+        <img src="assets/meo-khoc.jpg" alt="xin loi thanh huyen" class="img-fluid">
+      </div>
+
+      <div class="col pt-3 mt-3">
+        <div class="col-3 d-flex justify-content-between">
+          <button type="button" class="btn btn-success" (click)="sheSayYes()">Vâng em đồng ý</button>
+          <button type="button" class="btn btn-danger position-absolute"
+            [ngStyle]="{'top': positionY + '%', 'left': positionX + '%'}" (click)="changeTextButton()">
+            {{ changeText }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let popup of popups" [ngStyle]="{'position': 'absolute', 'top': popup.y + 'px', 'left': popup.x + 'px'}">
+  <pop-up></pop-up>
+</div>
+
+<router-outlet />

@@ -1,0 +1,26 @@
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffe1e9;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10%;
+    position: relative;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col>img {
+    width: 40vh;
+}
